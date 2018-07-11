@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../libs/weui/weui.min.css">
+    <link rel="stylesheet" href="../libs/weui/jquery-weui.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../libs/jquery.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../libs/fastclick.min.js"></script>
+    <script src="../libs/weui/weui.min.js"></script>
+    <script src="../libs/weui/jquery-weui.min.js"></script>
+    <script src="../libs/lewee.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/least.js"></script>
+</head>
+<body>
+   <!--商品详情-->
+   <div class="all prodetail">
+       <div class="top">
+           <!--轮播图-->
+           <div class="swiper-container">
+               <div class="swiper-wrapper">
+                   <div class="swiper-slide"><img src="../images/myschool.jpg" alt=""></div>
+                   <div class="swiper-slide"><img src="../images/myschool.jpg" alt=""></div>
+                   <div class="swiper-slide"><img src="../images/myschool.jpg" alt=""></div>
+               </div>
+               <div class="swiper-pagination"></div>
+           </div>
+           <div class="text">
+               <p>雅诗兰黛 <br> <span class="c_dcdcdc">一步到位</span> <br> <span class="themecolor">￥270.00</span></p>
+           </div>
+           <div class="title themecolor"><span class="icon"></span>商品详情</div>
+           <div class="article">
+               <img src="../images/test.png" alt="">
+               <img src="../images/test1.png" alt="">
+           </div>
+       </div>
+
+       <div class="bottom flex">
+           <div>1</div>
+           <div>
+               <a href="javascript:;" class="join">加入购物车</a>
+               <a href="">立即购买</a>
+           </div>
+       </div>
+
+   </div>
+
+   <!--弹出框 -->
+   <div class="shadow">
+       <div class="bottom">
+           <form action="">
+
+               <div></div>
+               <button type="button" class="buybtn">购买</button>
+           </form>
+       </div>
+   </div>
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: true,//可选选项，自动滑动，
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        loop:true
+    });
+    $('.join').click(function () {
+        $('.shadow').addClass('active')
+    })
+</script>
+</html>

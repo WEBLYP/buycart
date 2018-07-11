@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>收货地址</title>
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../libs/weui/weui.min.css">
+    <link rel="stylesheet" href="../libs/weui/jquery-weui.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../libs/jquery.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../libs/fastclick.min.js"></script>
+    <script src="../libs/weui/weui.min.js"></script>
+    <script src="../libs/weui/jquery-weui.min.js"></script>
+    <script src="../libs/lewee.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/least.js"></script>
+    <script src="../js/city-picker.min.js"></script>
+</head>
+<body>
+   <!--新建收货地址-->
+   <div class="all addresslist">
+
+       <ul class="lists">
+           <li>
+               <div class="top">
+                   <div class="flex">
+                       <span>清泉流响</span>
+                       <span>177555554444</span>
+                   </div>
+                   <div class="place">
+                       安徽省合肥市蜀山区望江路69号西湖国际广场A座1502
+                   </div>
+               </div>
+               <div class="bottom flex">
+                    <div class="checkbox left">
+                        <span class="checkboxs"></span><label for="">设为默认地址</label>
+                    </div>
+                    <div class="right">
+                        <a href=""><span class="icon_write"></span>编辑</a>
+                        <a href="javascript:;" class="delbtn"><span class="icon_del"></span>删除</a>
+                    </div>
+               </div>
+           </li>
+           <li>
+               <div class="top">
+                   <div class="flex">
+                       <span>清泉流响</span>
+                       <span>177555554445</span>
+                   </div>
+                   <div class="place">
+                       安徽省合肥市蜀山区望江路69号西湖国际广场A座1502
+                   </div>
+               </div>
+               <div class="bottom flex">
+                   <div class="checkbox left">
+                       <span class="checkboxs"></span><label for="">设为默认地址</label>
+                   </div>
+                   <div class="right">
+                       <a href=""><span class="icon_write"></span>编辑</a>
+                       <a href="javascript:;" class="delbtn"><span class="icon_del"></span>删除</a>
+                   </div>
+               </div>
+           </li>
+           <li>
+               <div class="top">
+                   <div class="flex">
+                       <span>清泉流响</span>
+                       <span>177555554446</span>
+                   </div>
+                   <div class="place">
+                       安徽省合肥市蜀山区望江路69号西湖国际广场A座1502
+                   </div>
+               </div>
+               <div class="bottom flex">
+                   <div class="checkbox left">
+                       <span class="checkboxs"></span><label for="">设为默认地址</label>
+                   </div>
+                   <div class="right">
+                       <a href=""><span class="icon_write"></span>编辑</a>
+                       <a href="javascript:;" class="delbtn"><span class="icon_del"></span>删除</a>
+                   </div>
+               </div>
+           </li>
+           <li>
+               <div class="top">
+                   <div class="flex">
+                       <span>清泉流响</span>
+                       <span>177555554446</span>
+                   </div>
+                   <div class="place">
+                       安徽省合肥市蜀山区望江路69号西湖国际广场A座1502
+                   </div>
+               </div>
+               <div class="bottom flex">
+                   <div class="checkbox left">
+                       <span class="checkboxs"></span><label for="">设为默认地址</label>
+                   </div>
+                   <div class="right">
+                       <a href=""><span class="icon_write"></span>编辑</a>
+                       <a href="javascript:;" class="delbtn"><span class="icon_del"></span>删除</a>
+                   </div>
+               </div>
+           </li>
+           <li>
+               <div class="top">
+                   <div class="flex">
+                       <span>清泉流响</span>
+                       <span>177555554446</span>
+                   </div>
+                   <div class="place">
+                       安徽省合肥市蜀山区望江路69号西湖国际广场A座1502
+                   </div>
+               </div>
+               <div class="bottom flex">
+                   <div class="checkbox left">
+                       <span class="checkboxs"></span><label for="">设为默认地址</label>
+                   </div>
+                   <div class="right">
+                       <a href=""><span class="icon_write"></span>编辑</a>
+                       <a href="javascript:;" class="delbtn"><span class="icon_del"></span>删除</a>
+                   </div>
+               </div>
+           </li>
+       </ul>
+       <a href="addaddress.html" class="addplace">添加收货地址</a>
+   </div>
+</body>
+
+<script>
+    $("#city-picker").cityPicker({
+        title: "请选择收货地址"
+    });
+    $('.checkbox').click(function () {
+       $('.checkbox').removeClass('selected');
+       $(this).addClass('selected');
+    });
+    $('.delbtn').click(function () {
+        var that=$(this);
+        $m.confirm('确定删除？',function () {
+            that.parents('li').remove();
+        })
+    });
+</script>
+</html>

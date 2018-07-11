@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>银行卡信息</title>
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../libs/weui/weui.min.css">
+    <link rel="stylesheet" href="../libs/weui/jquery-weui.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../libs/jquery.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../libs/fastclick.min.js"></script>
+    <script src="../libs/weui/weui.min.js"></script>
+    <script src="../libs/weui/jquery-weui.min.js"></script>
+    <script src="../libs/lewee.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/least.js"></script>
+</head>
+<body>
+   <!--登录-->
+   <div class="all addbankcard">
+
+       <form action="">
+           <div class="weui-cells">
+               <div class="weui-cell">
+                   <div class="weui-cell__hd"><label class="weui-label">持卡人</label></div>
+                   <div class="weui-cell__bd">
+                       <input class="weui-input" type="text" value="王子恒" disabled>
+                   </div>
+               </div>
+
+               <div class="weui-cell">
+                   <div class="weui-cell__hd"><label class="weui-label">预留手机</label></div>
+                   <div class="weui-cell__bd">
+                       <input class="weui-input" type="number" pattern="[0-9]*" value="177551114747" disabled>
+                   </div>
+               </div>
+
+               <div class="weui-cell weui-cell_select weui-cell_select-after">
+                   <div class="weui-cell__hd">
+                       <label for="" class="weui-label">开户银行</label>
+                   </div>
+                   <div class="weui-cell__bd">
+                       <select class="weui-select" name="select2" disabled>
+                           <option value="1">中国建设银行</option>
+                           <option value="2">中国农业银行</option>
+                           <option value="3">徽商银行</option>
+                       </select>
+                   </div>
+               </div>
+
+               <div class="weui-cell">
+                   <div class="weui-cell__hd"><label class="weui-label">开户支行</label></div>
+                   <div class="weui-cell__bd">
+                       <input class="weui-input" type="text" value="潜山支行" disabled>
+                   </div>
+               </div>
+
+               <div class="weui-cell">
+                   <div class="weui-cell__hd"><label class="weui-label">银行卡号</label></div>
+                   <div class="weui-cell__bd">
+                       <input class="weui-input" type="number" pattern="[0-9]*" value="6217001630013494445" disabled>
+                   </div>
+               </div>
+
+           </div>
+
+           <div class="confirm">
+               <button type="button">解除绑定</button>
+           </div>
+       </form>
+   </div>
+</body>
+<script>
+    $('.confirm button').click(function () {
+        $m.confirm('解绑此卡？',function () {
+            alert('gg')
+        })
+    })
+</script>
+</html>

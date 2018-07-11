@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>新建收货地址</title>
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../libs/weui/weui.min.css">
+    <link rel="stylesheet" href="../libs/weui/jquery-weui.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../libs/jquery.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../libs/fastclick.min.js"></script>
+    <script src="../libs/weui/weui.min.js"></script>
+    <script src="../libs/weui/jquery-weui.min.js"></script>
+    <script src="../libs/lewee.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/least.js"></script>
+    <script src="../js/city-picker.min.js"></script>
+</head>
+<body>
+   <!--新建收货地址-->
+   <div class="all login addaddress">
+       <form action="">
+
+           <div class="white">
+               <div class="forms flex">
+                   <label for="">收货人</label><input type="text" placeholder="姓名">
+               </div>
+               <div class="forms flex">
+                   <label for="">手机号码</label><input type="tel" maxlength="11" placeholder="11位有效手机号码">
+               </div>
+               <div class="forms flex">
+                   <label for="">所在地区</label><input type="text" id='city-picker' placeholder="省/市/区"/><span class="icon_right"></span>
+               </div>
+               <div class="forms flex align_top">
+                   <label for="">详细地址</label><textarea name="" id="" cols="30" rows="5" placeholder="街道地址"></textarea>
+               </div>
+           </div>
+
+
+           <div class="checkbox flex">
+               <span class="checkboxs"></span><label for="">设为默认地址</label>
+           </div>
+
+           <div class="forms confirm">
+               <button class="">确认</button>
+           </div>
+       </form>
+
+   </div>
+</body>
+<script>
+    $("#city-picker").cityPicker({
+        title: "请选择收货地址"
+    });
+    $('.checkbox').click(function () {
+        $(this).toggleClass('selected')
+    })
+</script>
+</html>
